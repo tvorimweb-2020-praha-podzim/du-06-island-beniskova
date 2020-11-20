@@ -1,0 +1,115 @@
+/* nejsme vcerejsi, pouzivame moderni box model */
+*, ::after, ::before { box-sizing: border-box; }
+
+/*
+ BARVY
+ pozadi           #f5f5f5
+ dekorace nadpisů #629edb
+*/
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    font-family: 'Merriweather', serif;
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 500px;
+}
+
+
+/* HLAVICKA */
+header{
+    text-align: center;
+    background-image: url(images/island-hlavicka.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: #f5f5f5;
+    padding: 0 1rem;
+}
+.autor{
+    border-top: 1px solid #f5f5f5;
+    padding-bottom: 1rem;
+    font-size: 10px;
+    font-style: italic;
+    font-weight: bold;
+    color: rgb(216, 212, 212);
+    margin-top: 1rem;
+}
+.titulek {
+    font-family: 'Raleway', serif;
+    margin-top: 0;
+    padding-top: 1rem;
+    font-size: 40px;
+    margin-bottom: 0;
+}
+.perex{
+    margin: 1rem 0;
+}
+
+
+/* MENU */
+ul{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: grey;
+    align-items: center;
+    border-bottom: 1px solid rgb(216, 212, 212);
+    margin: 0.1rem auto;
+    padding-bottom: 0.1rem;
+}
+
+/* OBSAH */
+p{
+    padding: 0 1rem;
+}
+img{
+    width: 100%;
+}
+.popisek{
+    text-align: center;
+    margin-top: 0;
+    font-size: 12px;
+}
+h2{
+    padding: 0 1rem;
+}
+
+
+/* FOTOGALERIE */
+.foto{
+    margin-left: 0;
+    width: 100%;
+}
+
+/* PATICKA */
+footer{
+    background-color: rgb(233, 229, 229);
+    font-size: 12px;
+    color: grey;
+    padding-top: 1.5rem;
+}
+.paticka a{
+    text-transform: inherit;
+}
+.uvodni-fotografie{
+    margin-bottom: 0;
+}
+
+@media screen and (min-width: 501px){
+    body{
+        max-width: 1000px;
+    }
+
+}
