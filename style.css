@@ -56,6 +56,7 @@ ul{
     flex-direction: column;
     text-align: center;
     padding: 0;
+    margin: 3rem 0;
 }
 li{
     list-style: none;
@@ -76,14 +77,23 @@ p{
 }
 img{
     width: 100%;
+    margin-top: 3rem;
 }
 .popisek{
     text-align: center;
     margin-top: 0;
     font-size: 12px;
+    margin-bottom: 3rem;
 }
 h2{
     padding: 0 1rem;
+    /*border-bottom: 4px solid rgb(97, 164, 209);
+    margin: 0.7rem auto;
+    padding-bottom: 0.7rem;*/
+}
+
+.videt :last-child{
+    margin-bottom: 3rem;
 }
 
 
@@ -91,6 +101,12 @@ h2{
 .foto{
     margin-left: 0;
     width: 100%;
+}
+.galerie img{
+    margin-top: 0;
+}
+.galerie .popisek{
+    margin-bottom: 0;
 }
 
 /* PATICKA */
@@ -111,5 +127,30 @@ footer{
     body{
         max-width: 1000px;
     }
-
+    ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        border-top: 1px solid rgb(216, 212, 212);
+        border-bottom: 1px solid rgb(216, 212, 212);
+    }
+    li{
+        padding: 0.5rem;
+    }
+    a{
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+    .foto{
+        margin: 0;
+        width: 50%;
+        border-bottom: 0;
+    }
+    .galerie{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .galerie figcaption{
+        display: none;
+    }
 }
