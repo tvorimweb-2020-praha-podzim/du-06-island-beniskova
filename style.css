@@ -15,7 +15,6 @@ body {
     font-family: 'Merriweather', serif;
     font-size: 16px;
     line-height: 1.6;
-    max-width: 500px;
 }
 
 
@@ -30,12 +29,18 @@ header{
     padding: 0 1rem;
 }
 .autor{
-    border-top: 1px solid #f5f5f5;
     padding-bottom: 1rem;
     font-size: 10px;
     font-style: italic;
     font-weight: bold;
     color: rgb(216, 212, 212);
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+.carka{
+    border-top: 2px solid rgb(216, 212, 212);
+    width: 50px;
+    margin: 0 auto;
     margin-top: 1rem;
 }
 .titulek {
@@ -61,14 +66,18 @@ ul{
 li{
     list-style: none;
 }
-a{
+.navigace a{
     text-decoration: none;
     text-transform: uppercase;
     color: grey;
     align-items: center;
+}
+.cara{
     border-bottom: 1px solid rgb(216, 212, 212);
-    margin: 0.1rem auto;
-    padding-bottom: 0.1rem;
+    margin: 0.2rem 0;
+}
+.navigace{
+    padding: 0 1.5rem;
 }
 
 /* OBSAH */
@@ -84,12 +93,21 @@ img{
     margin-top: 0;
     font-size: 12px;
     margin-bottom: 3rem;
+    color: grey;
+}
+.popisek a{
+    text-decoration: underline;
+    color: grey;
 }
 h2{
     padding: 0 1rem;
-    /*border-bottom: 4px solid rgb(97, 164, 209);
-    margin: 0.7rem auto;
-    padding-bottom: 0.7rem;*/
+    margin-bottom: 0;
+    
+}
+.podtrzitko{
+    border-bottom: 4px solid rgb(97, 164, 209);
+    width: 70px;
+    margin: 1.5rem 0;
 }
 
 .videt :last-child{
@@ -118,33 +136,51 @@ footer{
 }
 .paticka a{
     text-transform: inherit;
+    color: grey;
 }
 .uvodni-fotografie{
     margin-bottom: 0;
 }
 
 @media screen and (min-width: 501px){
-    body{
-        max-width: 1000px;
-    }
     ul{
         display: flex;
+        flex-wrap: nowrap;
         flex-direction: row;
         justify-content: space-evenly;
-        border-top: 1px solid rgb(216, 212, 212);
-        border-bottom: 1px solid rgb(216, 212, 212);
+        border-top: 1.5px solid  rgb(216, 212, 212);
+        border-bottom: 1.5px solid rgb(216, 212, 212);
     }
     li{
-        padding: 0.5rem;
+        border-right: 1.5px solid rgb(216, 212, 212);
+        padding:0 3rem;
     }
-    a{
-        border-bottom: none;
-        padding-bottom: 0;
+    ul :nth-child(7){
+        border-right: none;
     }
     .foto{
         margin: 0;
         width: 50%;
-        border-bottom: 0;
+    }
+    .foto .popisek{
+        position: relative;
+        bottom: 3rem;
+        color: #f5f5f5;
+        align-items: center;
+    }
+    .foto .popisek a{
+        color: #f5f5f5;
+    }
+    .videt .popisek,
+    .proc .popisek,
+    .uvod .popisek{
+        position: relative;
+        bottom: 30px;
+        color: #f5f5f5;
+        text-align: right;
+    }
+    .popisek a{
+        color: #f5f5f5;
     }
     .galerie{
         display: flex;
@@ -153,4 +189,99 @@ footer{
     .galerie figcaption{
         display: none;
     }
+    .foto img,
+    .foto .popisek{
+        transition: transform 3s ease;
+    }
+    .foto:hover img,
+    .foto:hover .popisek{
+        transform: scale(1.2);
+    }
 }
+@media screen and (min-width: 960px){
+    body{
+        background-color: rgb(250, 250, 250);
+        display: flex;
+        flex-direction: column;
+    }
+    header{
+        min-height: 300px;
+    }
+    h1{
+        font-size: 7rem;
+    }
+    .pc{
+        background-color: #f5f5f5;
+        max-width: 960px;
+        box-shadow: 2px 2px 9px #93999e;
+        align-self: center;
+        position: relative;
+        bottom: 60px;
+    }
+    
+    .obsah{
+        display: flex;
+    }
+    .menu{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 140%;
+        text-align: left;
+    }
+    ul{
+        border: 0;
+    }
+    li{
+        padding-left: 0;
+        border-right: 0;
+    }
+    .cara{
+        width: 200px;
+    }
+    p.popisek.uvodni{
+        position: relative;
+        bottom: 30px;
+        color: #f5f5f5;
+        text-align: right;
+    }
+    .popisek a{
+        color: #f5f5f5;
+    }
+    .proc p{
+        padding-left: 2rem;
+        padding-right: 17rem;
+    }
+    h2{
+        padding-left: 2rem;
+    }
+    .videt p,
+    .videt h2,
+    .videt .podtrzitko{
+        padding-left: 17rem; 
+    }
+    .videt .podtrzitko{
+        padding-left: 0;
+        margin-left: 15.5rem;
+    }
+    .proc .popisek{
+       padding-right: 1rem;
+       position: relative;
+        bottom: 30px;
+        color: #f5f5f5;
+        text-align: right;
+    }
+    .galerie{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .foto{
+        width: calc(100%/3);
+    }
+    footer{
+        background-color: rgb(250, 250, 250);
+        padding-right: 0;
+        box-shadow: none;
+    }
+}
+    
